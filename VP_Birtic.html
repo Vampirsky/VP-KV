@@ -1,59 +1,110 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <body>
-      <script src="//d3js.org/d3.v3.min.js"></script>
-      <script src="//d3js.org/topojson.v1.min.js"></script>
-      <script>
-      var width = 1000,
-          height = 700,
-          country,
-          state;
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script>
+    var width = 1000,
+        height = 700,
+        country,
+        state;
+    var projection = d3.geo.mercator()
+        .scale(800)
+        .translate([200, 1100]);
 
-      var projection = d3.geo.mercator()
-          .scale(800)
-          .translate([200, 1100]);
+    var path = d3.geo.path()
+        .projection(projection);
+    var svg = d3.select("body").append("svg")
+        .attr("preserveAspectRatio", "xMidYMid")
+        .attr("viewBox", "0 0 " + width + " " + height)
+        .attr("width", width)
+        .attr("height", height)
+        .style("background", "#006bff");      
 
-      var path = d3.geo.path()
-          .projection(projection);
+    var g = svg.append("g");
 
-      var svg = d3.select("body").append("svg")
-          .attr("preserveAspectRatio", "xMidYMid")
-          .attr("viewBox", "0 0 " + width + " " + height)
-          .attr("width", width)
-          .attr("height", height)
-          .style("background", "lightblue");      
+    d3.json("europe.json", function(error, world) {
+      g.append("g")
+        .attr("id", "countries")          
+        .selectAll("path")
+        .data(topojson.feature(world, world.objects.countries).features)
+        .enter()
+        .append("path")
+        .attr("id", function(d) { return d.id; })
+        .attr("d", path)
+        .style("fill", "#037e11")
+        .style("stroke", "black")
+        .style("stroke-width", 1)
+        .style("stroke-opacity", 1);
+        });   
 
-      var g = svg.append("g");
+    var lineData1 = [ { "x": 732,   "y": 576},  { "x": 706,  "y": 516},
+                     { "x": 571,  "y": 519}, { "x": 516,  "y": 496},
+                     { "x": 504,  "y": 460}, { "x": 492,  "y": 441},
+                     { "x": 483,  "y": 410}, { "x": 436,  "y": 383},
+                     { "x": 409,  "y": 368}, { "x": 385,  "y": 343},
+                     { "x": 336,  "y": 291}];  
 
-      d3.json("europe.json", function(error, world) {
-        g.append("g")
-          .attr("id", "countries")          
-          .selectAll("path")
-          .data(topojson.feature(world, world.objects.countries).features)
-          .enter()
-          .append("path")
-          .attr("id", function(d) { return d.id; })
-          .attr("d", path)
-          .style("fill", "green")
-          .style("stroke", "black")
-          .style("stroke-width", 1)
-          .style("stroke-opacity", 1);
-          });   
+    var lineFunction = d3.svg.line()
+      .x(function(d) { return d.x; })
+      .y(function(d) { return d.y; })
+      .interpolate("monotone");
 
-      var lineData = [ { "x": 800,   "y": 600},  { "x": 650,  "y": 500},
-                       { "x": 500,  "y": 450}, { "x": 660,  "y": 250},
-                       { "x": 450,  "y": 200}, { "x": 350,  "y": 280}];  
+    var lineFunction2 = d3.svg.line()
+      .x(function(d) { return d.x; })
+      .y(function(d) { return d.y; })
+      .interpolate("basis");    
 
-      var lineFunction = d3.svg.line()
-                         .x(function(d) { return d.x; })
-                         .y(function(d) { return d.y; })
-                         .interpolate("monotone");    
+    var lineGraph = svg.append("path")
+      .attr("d", lineFunction(lineData1))
+      .attr("stroke", "#86ddff")
+      .attr("stroke-width", 5)
+      .attr("fill", "none");
 
-      var lineGraph = svg.append("path")
-                      .attr("d", lineFunction(lineData))
-                      .attr("stroke", "yellow")
-                      .attr("stroke-width", 7)
-                      .attr("fill", "none");                                      
-      </script>
+    var arrow = svg.append("svg:path")
+      .attr("d", d3.svg.symbol().type("triangle-down"))
+      .attr("transform", "translate(335,292) rotate(15) scale(1.5)")
+      .attr("fill", "#86ddff");
+
+    var lineData2 = [ { "x": 607,   "y": 676},  { "x": 459,  "y": 678},
+                     { "x": 364,  "y": 652}, { "x": 326,  "y": 611},
+                     { "x": 332,  "y": 562}, { "x": 395,  "y": 531},
+                     { "x": 430,  "y": 506}, { "x": 420,  "y": 470},
+                     { "x": 365,  "y": 424}, { "x": 344,  "y": 385}];
+
+    var lineGraph = svg.append("path")
+      .attr("d", lineFunction2(lineData2))
+      .attr("stroke", "#86ddff")
+      .attr("stroke-width", 5)
+      .attr("fill", "none");
+
+    var arrow2 = svg.append("svg:path")
+      .attr("d", d3.svg.symbol().type("triangle-down"))
+      .attr("transform", "translate(343,386) rotate(30) scale(1.5)")
+      .attr("fill", "#86ddff");
+
+    var lineData3 = [ { "x": 137,   "y": 606},  { "x": 122,  "y": 559},
+                     { "x": 144,  "y": 476}, { "x": 196,  "y": 445},
+                     { "x": 231,  "y": 373}];
+
+    var lineGraph = svg.append("path")
+      .attr("d", lineFunction2(lineData3))
+      .attr("stroke", "#86ddff")
+      .attr("stroke-width", 5)
+      .attr("fill", "none");
+
+    var arrow3 = svg.append("svg:path")
+      .attr("d", d3.svg.symbol().type("triangle-down"))
+      .attr("transform", "translate(229,374) rotate(85) scale(1.5)")
+      .attr("fill", "#86ddff");
+
+    svg.on('click', function () {
+      var coordinates = [0, 0];
+      coordinates = d3.mouse(this);
+      var x = coordinates[0];
+      var y = coordinates[1];
+      console.log(x, y);
+    });
+    </script>
 </body>
 </html>
