@@ -481,18 +481,18 @@ var countryEU = [	{
 						{"x":396,"y": 605}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:158},			
+						{axis:"Algeria",value:2024},
+						{axis:"Tunisia",value:374},
+						{axis:"Armenia",value:6},
+						{axis:"Georgia",value:83},
+						{axis:"Turkey",value:559},
+						{axis:"Afghanistan",value:58576},						
+						{axis:"Syria",value:72429},						
+						{axis:"Iran",value:2708},
+						{axis:"Iraq",value:10668},						
+						{axis:"Egypt",value:336},
+						{axis:"Morocco",value:1466}]
 					]},
 						
 					{
@@ -543,18 +543,18 @@ var countryEU = [	{
 						{"x":422,"y": 642}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:210},			
+						{axis:"Algeria",value:1102},
+						{axis:"Tunisia",value:205},
+						{axis:"Armenia",value:6},
+						{axis:"Georgia",value:0},
+						{axis:"Turkey",value:65},
+						{axis:"Afghanistan",value:165566},						
+						{axis:"Syria",value:313304},						
+						{axis:"Iran",value:11727},
+						{axis:"Iraq",value:77094},						
+						{axis:"Egypt",value:138},
+						{axis:"Morocco",value:2783}]
 					]},
 					
 					{
@@ -612,18 +612,18 @@ var countryEU = [	{
 						{"x":466,"y": 674}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:6},			
+						{axis:"Algeria",value:647},
+						{axis:"Tunisia",value:60},
+						{axis:"Armenia",value:7},
+						{axis:"Georgia",value:10},
+						{axis:"Turkey",value:18},
+						{axis:"Afghanistan",value:10868},						
+						{axis:"Syria",value:17473},						
+						{axis:"Iran",value:368},
+						{axis:"Iraq",value:9923},						
+						{axis:"Egypt",value:21},
+						{axis:"Morocco",value:177}]
 					]},
 						
 					{
@@ -723,18 +723,18 @@ var countryEU = [	{
 						{"x":513,"y": 718}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:19},			
+						{axis:"Algeria",value:549},
+						{axis:"Tunisia",value:82},
+						{axis:"Armenia",value:100},
+						{axis:"Georgia",value:2162},
+						{axis:"Turkey",value:126},
+						{axis:"Afghanistan",value:5113},						
+						{axis:"Syria",value:5356},						
+						{axis:"Iran",value:1090},
+						{axis:"Iraq",value:1371},						
+						{axis:"Egypt",value:1120},
+						{axis:"Morocco",value:438}]
 					]},
 					
 					{
@@ -803,18 +803,18 @@ var countryEU = [	{
 						{"x":299,"y": 466}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:253},			
+						{axis:"Algeria",value:476},
+						{axis:"Tunisia",value:241},
+						{axis:"Armenia",value:292},
+						{axis:"Georgia",value:366},
+						{axis:"Turkey",value:103},
+						{axis:"Afghanistan",value:4165},						
+						{axis:"Syria",value:19092},						
+						{axis:"Iran",value:4119},
+						{axis:"Iraq",value:2188},						
+						{axis:"Egypt",value:115},
+						{axis:"Morocco",value:738}]
 					]},
 					
 					{
@@ -934,18 +934,18 @@ var countryEU = [	{
 						{"x":324,"y": 369}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:1568},			
+						{axis:"Algeria",value:1504},
+						{axis:"Tunisia",value:798},
+						{axis:"Armenia",value:1139},
+						{axis:"Georgia",value:3071},
+						{axis:"Turkey",value:779},
+						{axis:"Afghanistan",value:53072},						
+						{axis:"Syria",value:107430},						
+						{axis:"Iran",value:8059},
+						{axis:"Iraq",value:25708},						
+						{axis:"Egypt",value:1348},
+						{axis:"Morocco",value:2598}]
 					]},
 					
 					{
@@ -1153,18 +1153,18 @@ var countryEU = [	{
 						{"x":323,"y": 370}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:259},			
+						{axis:"Algeria",value:402},
+						{axis:"Tunisia",value:209},
+						{axis:"Armenia",value:54},
+						{axis:"Georgia",value:208},
+						{axis:"Turkey",value:219},
+						{axis:"Afghanistan",value:9315},						
+						{axis:"Syria",value:13839},						
+						{axis:"Iran",value:2128},
+						{axis:"Iraq",value:3589},						
+						{axis:"Egypt",value:413},
+						{axis:"Morocco",value:539}]
 					]},
 					
 					{
@@ -1263,18 +1263,18 @@ var countryEU = [	{
 						{"x":157,"y": 689}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:100},			
+						{axis:"Algeria",value:1667},
+						{axis:"Tunisia",value:13},
+						{axis:"Armenia",value:66},
+						{axis:"Georgia",value:57},
+						{axis:"Turkey",value:31},
+						{axis:"Afghanistan",value:240},						
+						{axis:"Syria",value:8605},						
+						{axis:"Iran",value:243},
+						{axis:"Iraq",value:324},						
+						{axis:"Egypt",value:87},
+						{axis:"Morocco",value:703}]
 					]},
 					
 					{
@@ -1394,18 +1394,18 @@ var countryEU = [	{
 						{"x":275,"y": 682}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:525},			
+						{axis:"Algeria",value:503},
+						{axis:"Tunisia",value:2202},
+						{axis:"Armenia",value:251},
+						{axis:"Georgia",value:407},
+						{axis:"Turkey",value:1675},
+						{axis:"Afghanistan",value:11774},						
+						{axis:"Syria",value:2043},						
+						{axis:"Iran",value:1306},
+						{axis:"Iraq",value:2380},						
+						{axis:"Egypt",value:2696},
+						{axis:"Morocco",value:1694}]
 					]},
 					
 					{
@@ -1540,18 +1540,18 @@ var countryEU = [	{
 						{"x":188,"y": 538}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:2707},			
+						{axis:"Algeria",value:855},
+						{axis:"Tunisia",value:109},
+						{axis:"Armenia",value:52},
+						{axis:"Georgia",value:145},
+						{axis:"Turkey",value:1059},
+						{axis:"Afghanistan",value:7664},						
+						{axis:"Syria",value:8821},						
+						{axis:"Iran",value:13425},
+						{axis:"Iraq",value:5133},						
+						{axis:"Egypt",value:1267},
+						{axis:"Morocco",value:258}]
 					]},
 					
 					{
@@ -1648,17 +1648,17 @@ var countryEU = [	{
 							{"x":485,"y": 182}
 					],
 					"people":[[						
-						{axis:"Libya",value:5500},			
-						{axis:"Algeria",value:5500},
-						{axis:"Tunisia",value:5500},
-						{axis:"Armenia",value:5500},
-						{axis:"Georgia",value:5500},
-						{axis:"Turkey",value:5500},
-						{axis:"Afghanistan",value:5500},						
-						{axis:"Syria",value:5500},						
-						{axis:"Iran",value:5500},
-						{axis:"Iraq",value:5500},						
-						{axis:"Egypt",value:5500},
-						{axis:"Morocco",value:5500}]
+						{axis:"Libya",value:80},			
+						{axis:"Algeria",value:298},
+						{axis:"Tunisia",value:58},
+						{axis:"Armenia",value:9},
+						{axis:"Georgia",value:65},
+						{axis:"Turkey",value:178},
+						{axis:"Afghanistan",value:6237},						
+						{axis:"Syria",value:1486},						
+						{axis:"Iran",value:1006},
+						{axis:"Iraq",value:23071},						
+						{axis:"Egypt",value:46},
+						{axis:"Morocco",value:326}]
 					]}
 				];

@@ -18,8 +18,20 @@ var RadarChart = {
 	 ExtraWidthY: 100,
 	 color: "#ffb3b3",
 	 colorCircle: "#e60000"
-	};
-	
+	};	
+
+	var currentX = function(j, i){
+		  dataValues.push([
+			cfg.w/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
+			cfg.h/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
+		]);
+		return cfg.w/2*(1-(Math.max(j.value, 0)/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total));
+		};
+
+	var currentY = function(j, i){
+		  return cfg.h/2*(1-(Math.max(j.value, 0)/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total));
+		};	
+
 	cfg.maxValue = Math.max(cfg.maxValue, d3.max(d, function(i){return d3.max(i.map(function(o){return o.value;}))}));
 	var allAxis = (d[0].map(function(i, j){return i.axis}));
 	var total = allAxis.length;
@@ -98,7 +110,7 @@ var RadarChart = {
 		.style("stroke-width", "3px");
 	
 	//text kod linija
-	axis.append("text")
+	axis.append("text")		
 		.attr("class", "legend")
 		.text(function(d){return d})
 		.style("font-family", "consolas")
@@ -110,7 +122,7 @@ var RadarChart = {
 		.attr("transform", function(d, i){return "translate(0, -10)"})
 		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-70*Math.sin(i*cfg.radians/total);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-15*Math.cos(i*cfg.radians/total);});
-		
+
  	d.forEach(function(y, x){
 	  dataValues = [];
 	  g.selectAll(".nodes")
@@ -129,6 +141,7 @@ var RadarChart = {
 					 .attr("class", "radar-chart-serie")
 					 .style("stroke-width", "2px")
 					 .style("stroke", cfg.color)
+					 .style("opacity", 0)
 					 .attr("points",function(d) {
 						 var str="";
 						 for(var pti=0;pti<d.length;pti++){
@@ -138,6 +151,10 @@ var RadarChart = {
 					  })
 					 .style("fill", cfg.color)
 					 .style("fill-opacity", cfg.opacityArea);
+
+	area.transition()
+		.duration(900)
+		.style("opacity", 1);
 					 
 	  area.exit().remove();
 	});
@@ -152,43 +169,44 @@ var RadarChart = {
 		.attr("class", "radar-chart-serie")
 		.attr('r', cfg.radius)
 		.attr("alt", function(j){return Math.max(j.value, 0)})
-		.attr("cx", function(j, i){
-		  dataValues.push([
-			cfg.w/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
-			cfg.h/2*(1-(parseFloat(Math.max(j.value, 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
-		]);
-		return cfg.w/2*(1-(Math.max(j.value, 0)/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total));
-		})
-		.attr("cy", function(j, i){
-		  return cfg.h/2*(1-(Math.max(j.value, 0)/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total));
-		})
+		.attr("cx", cfg.w/2)		
+		.attr("cy", cfg.h/2)
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.colorCircle).style("fill-opacity", 1)
+		.style("opacity", 0.5)
 		.on('mouseover', function (d){
 					newX =  parseFloat(d3.select(this).attr('cx')) - 40;
 					newY =  parseFloat(d3.select(this).attr('cy')) - 20;
 					
-					tooltip
+					tooltip												 					 
+						.transition()
+						.duration(500)
 						.attr('x', newX)
 						.attr('y', newY)
 						.text(Format(d.value))
 						.style('opacity', 1);					
 				  })
 		.on('mouseout', function(){
-					tooltip						
-						.attr('x', 0)
-						.attr('y', 0)
+					tooltip
 						.style('opacity', 0);
 					
 				  });
+	
+	nodes.transition()
+		 .duration(700)
+		 .attr("cx", currentX)
+		 .attr("cy", currentY)
+		 .style("opacity", 1);
 				  
-	  nodes.exit().remove();
+	nodes.exit().remove();
 
 	});
-	tooltip = g.append('text')
+	tooltip = g.append('text')	
 				.style('font-family', 'consolas')
 				.style('font-size', '24px')
 				.style('fill', 'white')
-				.style('font-weight', 'bold');
-  }
+				.style('font-weight', 'bold')
+				.attr('x', 0)
+				.attr('y', 0);				
+  }  
 };

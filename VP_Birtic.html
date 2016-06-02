@@ -37,8 +37,6 @@
 	<div id="chart"></div>
 		<script>
 		//TODO: 
-		// - popuniti podatke
-		// - popraviti Afganistan
 		// - urediti kod
 		var width = 1150,
 			height = 925,
@@ -48,54 +46,27 @@
 			state,
 			i=0;
 
-		//var w , h, maxValue, levels;
 		var nations = [
 			[
-			{axis:"Bulgaria",value:10000},
-			{axis:"Italy",value:10000},			
-			{axis:"Finland",value:12000},
-			{axis:"Belgium",value:14000},
-			{axis:"Norway",value:14000},
-			{axis:"Sweden",value:15000},
-			{axis:"France",value:25000},			
-			{axis:"Greece",value:26600},
-			{axis:"United Kingdom",value:50000},
-			{axis:"Austria",value:62000},
-			{axis:"Germany",value:77000},
-			{axis:"Hungary",value:95000},
-			{axis:"Serbia",value:40000},
-			{axis:"Switzerland",value:25000},
-			{axis:"Denmark",value:65000},
-			{axis:"Netherlands",value:120000}
+			{axis:"Radar Chart",value:10000},
+			{axis:"",value:10000},			
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},			
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000},
+			{axis:"",value:10000}
 			]
-		];
+		];		
 		
-		var germany = [
-			[
-			{axis:"Georgia",value:9805},
-			{axis:"Libya",value:2409},			
-			{axis:"Algeria",value:6666},
-			{axis:"Tunisia",value:2632},
-			{axis:"Armenia",value:6249},
-			{axis:"Morocco",value:5457},
-			{axis:"Turkey",value:6493},			
-			{axis:"Egypt",value:4650},
-			{axis:"Afghanistan",value:75482},
-			{axis:"Iran",value:21740},
-			{axis:"Iraq",value:69987},
-			{axis:"Syria",value:304558}
-			]
-		];
-		
-		//var chart = RadarChart.chart();
-		//var cfg = chart.config();
-
-		/*var mycfg = {
-			w: w,
-			h: h,
-			maxValue: maxValue,
-			levels: levels
-		}		*/
 		RadarChart.draw("#chart", nations);
 					
 		var projection = d3.geo.mercator()
@@ -127,67 +98,7 @@
 			.style("stroke", "black")
 			.style("stroke-width", 1)
 			.style("stroke-opacity", 1);
-			});   
-
-		/*var lineData1 = [ { "x": 732,   "y": 576},  { "x": 706,  "y": 516},
-						 { "x": 571,  "y": 519}, { "x": 516,  "y": 496},
-						 { "x": 504,  "y": 460}, { "x": 492,  "y": 441},
-						 { "x": 483,  "y": 410}, { "x": 436,  "y": 383},
-						 { "x": 409,  "y": 368}, { "x": 385,  "y": 343},
-						 { "x": 336,  "y": 291}];  
-
-		var lineFunction = d3.svg.line()
-		  .x(function(d) { return d.x; })
-		  .y(function(d) { return d.y; })
-		  .interpolate("monotone");
-
-		var lineFunction2 = d3.svg.line()
-		  .x(function(d) { return d.x; })
-		  .y(function(d) { return d.y; })
-		  .interpolate("basis");    
-
-		var lineGraph = svg.append("path")
-		  .attr("d", lineFunction(lineData1))
-		  .attr("stroke", "#86ddff")
-		  .attr("stroke-width", 5)
-		  .attr("fill", "none");
-
-		var arrow = svg.append("svg:path")
-		  .attr("d", d3.svg.symbol().type("triangle-down"))
-		  .attr("transform", "translate(335,292) rotate(15) scale(1.5)")
-		  .attr("fill", "#86ddff");
-
-		var lineData2 = [ { "x": 607,   "y": 676},  { "x": 459,  "y": 678},
-						 { "x": 364,  "y": 652}, { "x": 326,  "y": 611},
-						 { "x": 332,  "y": 562}, { "x": 395,  "y": 531},
-						 { "x": 430,  "y": 506}, { "x": 420,  "y": 470},
-						 { "x": 365,  "y": 424}, { "x": 344,  "y": 385}];
-
-		var lineGraph = svg.append("path")
-		  .attr("d", lineFunction2(lineData2))
-		  .attr("stroke", "#86ddff")
-		  .attr("stroke-width", 5)
-		  .attr("fill", "none");
-
-		var arrow2 = svg.append("svg:path")
-		  .attr("d", d3.svg.symbol().type("triangle-down"))
-		  .attr("transform", "translate(343,386) rotate(30) scale(1.5)")
-		  .attr("fill", "#86ddff");
-
-		var lineData3 = [ { "x": 137,   "y": 606},  { "x": 122,  "y": 559},
-						 { "x": 144,  "y": 476}, { "x": 196,  "y": 445},
-						 { "x": 231,  "y": 373}];
-
-		var lineGraph = svg.append("path")
-		  .attr("d", lineFunction2(lineData3))
-		  .attr("stroke", "#86ddff")
-		  .attr("stroke-width", 5)
-		  .attr("fill", "none");
-
-		var arrow3 = svg.append("svg:path")
-		  .attr("d", d3.svg.symbol().type("triangle-down"))
-		  .attr("transform", "translate(229,374) rotate(85) scale(1.5)")
-		  .attr("fill", "#86ddff");*/			
+			});		
 		  
 		svg.selectAll("europe.polygon")
 			.data(countryEU)
@@ -242,9 +153,6 @@
 		function mouseout (d) {
 			label.attr("transform", "translate(0,0)")
 				.style("opacity", 0);
-				
-			if(i == 0)
-				RadarChart.draw("#chart", nations);
 			}
 
 		svg.on('click', function () {
